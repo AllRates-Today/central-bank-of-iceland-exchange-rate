@@ -170,9 +170,9 @@ Pass `{ symbol: 'USD' }` instead of `source`/`target` to get the raw published r
 
 ## 🗺️ Currencies covered
 
-Central Bank of Iceland currently publishes rates covering **10 currencies** (as of the latest table):
+Central Bank of Iceland currently publishes rates covering **10 currencies** against the ISK (as of the latest table):
 
-`CAD` · `CHF` · `DKK` · `EUR` · `GBP` · `JPY` · `NOK` · `SEK` · `USD` · `XDR`
+🇨🇦 `CAD` · 🇨🇭 `CHF` · 🇩🇰 `DKK` · 🇪🇺 `EUR` · 🇬🇧 `GBP` · 🇯🇵 `JPY` · 🇳🇴 `NOK` · 🇸🇪 `SEK` · 🇺🇸 `USD` · `XDR`
 
 ## ⚖️ Published vs derived rates
 
