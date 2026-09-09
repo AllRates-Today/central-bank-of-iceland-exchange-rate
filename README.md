@@ -70,10 +70,10 @@ const pair = await getRate('USD', 'ISK', { apiKey: 'art_live_...' });
 {
   bank: 'cbi',
   name: 'Central Bank of Iceland',
-  rate_date: '2026-08-11',   // Central Bank of Iceland's own publication date
+  rate_date: '2026-09-09',   // Central Bank of Iceland's own publication date
   source: 'USD',
   target: 'ISK',
-  rate: 123.22,
+  rate: 120.49,
   rate_type: 'middle',
   derived: false,
   method: 'published',
@@ -98,9 +98,9 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'cbi',
   name: 'Central Bank of Iceland',
-  rate_date: '2026-08-11',
+  rate_date: '2026-09-09',
   rates: [
-    { "base": "USD", "quote": "ISK", "type": "middle", "value": 123.22 },
+    { "base": "USD", "quote": "ISK", "type": "middle", "value": 120.49 },
     // … the rest of the published table (10 currencies vs ISK)
   ],
   disclaimer: '…'
@@ -140,7 +140,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'central-bank-of-iceland-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'ISK', from: '2026-01-01', to: '2026-08-11' },
+  { source: 'USD', target: 'ISK', from: '2026-01-01', to: '2026-09-09' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -153,11 +153,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'ISK',
   from: '2026-01-01',
-  to: '2026-08-11',
+  to: '2026-09-09',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-08-11', rate: 123.22, rate_type: 'middle', derived: false, method: 'published' },
+    { date: '2026-09-09', rate: 120.49, rate_type: 'middle', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
@@ -235,6 +235,14 @@ getRate('USD', 'ISK', { apiKey: 'art_live_...' }).then((pair) => console.log(pai
 | `getLatestRates({ apiKey })` | Free | The central bank's full latest published table |
 | `getRatesForDate(date, { apiKey, source?, target? })` | Paid | The official table (or one pair) for a YYYY-MM-DD date |
 | `getHistory({ symbol \| source+target, from?, to? }, { apiKey })` | Paid | Daily series since 2016 |
+
+## 📥 Bulk data (no key)
+
+Need the whole archive rather than an API call? The same published tables are mirrored daily as open data:
+
+- Hugging Face: [AllRates/central-bank-exchange-rates](https://huggingface.co/datasets/AllRates/central-bank-exchange-rates) — one CSV per institution (`rates/cbi.csv`)
+- Kaggle: [allratestoday/central-bank-exchange-rates](https://www.kaggle.com/datasets/allratestoday/central-bank-exchange-rates)
+- CDN JSON: `https://cdn.jsdelivr.net/gh/AllRates-Today/central-bank-exchange-rates@main/data/cbi/latest.json`
 
 ## 🔗 Links
 
