@@ -85,10 +85,10 @@ const pair = await getRate('USD', 'ISK', { apiKey: 'art_live_...' });
 {
   bank: 'cbi',
   name: 'Central Bank of Iceland',
-  rate_date: '2026-09-25',   // Central Bank of Iceland's own publication date
+  rate_date: '2026-10-06',   // Central Bank of Iceland's own publication date
   source: 'USD',
   target: 'ISK',
-  rate: 119.79,
+  rate: 121.75,
   rate_type: 'middle',
   derived: false,
   method: 'published',
@@ -113,9 +113,9 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'cbi',
   name: 'Central Bank of Iceland',
-  rate_date: '2026-09-25',
+  rate_date: '2026-10-06',
   rates: [
-    { "base": "USD", "quote": "ISK", "type": "middle", "value": 119.79 },
+    { "base": "USD", "quote": "ISK", "type": "middle", "value": 121.75 },
     // … the rest of the published table (10 currencies vs ISK)
   ],
   disclaimer: '…'
@@ -155,7 +155,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'central-bank-of-iceland-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'ISK', from: '2026-01-01', to: '2026-09-25' },
+  { source: 'USD', target: 'ISK', from: '2026-01-01', to: '2026-10-06' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -168,11 +168,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'ISK',
   from: '2026-01-01',
-  to: '2026-09-25',
+  to: '2026-10-06',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-09-25', rate: 119.79, rate_type: 'middle', derived: false, method: 'published' },
+    { date: '2026-10-06', rate: 121.75, rate_type: 'middle', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
