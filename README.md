@@ -85,10 +85,10 @@ const pair = await getRate('USD', 'ISK', { apiKey: 'art_live_...' });
 {
   bank: 'cbi',
   name: 'Central Bank of Iceland',
-  rate_date: '2026-10-06',   // Central Bank of Iceland's own publication date
+  rate_date: '2026-10-08',   // Central Bank of Iceland's own publication date
   source: 'USD',
   target: 'ISK',
-  rate: 121.75,
+  rate: 122.47,
   rate_type: 'middle',
   derived: false,
   method: 'published',
@@ -113,9 +113,9 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'cbi',
   name: 'Central Bank of Iceland',
-  rate_date: '2026-10-06',
+  rate_date: '2026-10-08',
   rates: [
-    { "base": "USD", "quote": "ISK", "type": "middle", "value": 121.75 },
+    { "base": "USD", "quote": "ISK", "type": "middle", "value": 122.47 },
     // … the rest of the published table (10 currencies vs ISK)
   ],
   disclaimer: '…'
@@ -155,7 +155,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'central-bank-of-iceland-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'ISK', from: '2026-01-01', to: '2026-10-06' },
+  { source: 'USD', target: 'ISK', from: '2026-01-01', to: '2026-10-08' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -168,11 +168,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'ISK',
   from: '2026-01-01',
-  to: '2026-10-06',
+  to: '2026-10-08',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-10-06', rate: 121.75, rate_type: 'middle', derived: false, method: 'published' },
+    { date: '2026-10-08', rate: 122.47, rate_type: 'middle', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
@@ -221,6 +221,7 @@ curl "https://allratestoday.com/api/v1/central-bank/cbi/latest?format=xml&api_ke
 
 - MCP server: `npx -y @allratestoday/central-bank-mcp` (stdio) or the hosted endpoint `https://allratestoday.com/api/mcp` — tools for official rates, history, cross-bank comparison and publication calendars
 - Already using the general SDK or MCP server? Since 2026-10-01 [`@allratestoday/sdk`](https://www.npmjs.com/package/@allratestoday/sdk) 1.4+ has `officialRates('cbi')` and [`@allratestoday/mcp-server`](https://www.npmjs.com/package/@allratestoday/mcp-server) 0.6+ has a `get_official_rates` tool — both return this source's latest table with no key, so you can add it without a second dependency
+- Claude Code plugin (no key): `/plugin marketplace add AllRates-Today/claude-code-plugin` then `/plugin install allratestoday@allratestoday` — bundles both MCP servers plus an `/official-rate cbi ...` command
 - Machine-readable site guide: [llms.txt](https://allratestoday.com/llms.txt) · [for-ai-agents](https://allratestoday.com/for-ai-agents/)
 
 ## ⚖️ Published vs derived rates
