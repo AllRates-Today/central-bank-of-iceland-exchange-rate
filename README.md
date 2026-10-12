@@ -40,20 +40,20 @@ The open endpoint serves the *latest* table only and asks for a visible attribut
 Today's full Central Bank of Iceland table, straight from the central bank's latest publication. On GitHub it is refreshed by [a daily Action](.github/workflows/daily-table.yml) that reads the keyless endpoint above and commits only when the central bank publishes a new table; the copy on npm is as of the package's publish date.
 
 <!-- daily-table:start -->
-Published **2026-10-09** by Central Bank of Iceland — 10 rates. Updated 2026-10-09.
+Published **2026-10-12** by Central Bank of Iceland — 10 rates. Updated 2026-10-12.
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| CAD | ISK | middle | 85.81 |
-| CHF | ISK | middle | 146.89 |
-| DKK | ISK | middle | 18.301 |
-| EUR | ISK | middle | 136.8 |
-| GBP | ISK | middle | 161.39 |
-| JPY | ISK | middle | 0.7714 |
-| NOK | ISK | middle | 12.767 |
-| SEK | ISK | middle | 12.25 |
-| USD | ISK | middle | 122.08 |
-| XDR | ISK | middle | 165.19 |
+| CAD | ISK | middle | 85.54 |
+| CHF | ISK | middle | 146.48 |
+| DKK | ISK | middle | 18.248 |
+| EUR | ISK | middle | 136.4 |
+| GBP | ISK | middle | 161.46 |
+| JPY | ISK | middle | 0.7692 |
+| NOK | ISK | middle | 12.753 |
+| SEK | ISK | middle | 12.182 |
+| USD | ISK | middle | 121.99 |
+| XDR | ISK | middle | 164.95 |
 
 Source: [Official rates published by CBI, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/cbi/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
 <!-- daily-table:end -->
@@ -110,10 +110,10 @@ const pair = await getRate('USD', 'ISK', { apiKey: 'art_live_...' });
 {
   bank: 'cbi',
   name: 'Central Bank of Iceland',
-  rate_date: '2026-10-08',   // Central Bank of Iceland's own publication date
+  rate_date: '2026-10-12',   // Central Bank of Iceland's own publication date
   source: 'USD',
   target: 'ISK',
-  rate: 122.47,
+  rate: 121.99,
   rate_type: 'middle',
   derived: false,
   method: 'published',
@@ -138,9 +138,9 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'cbi',
   name: 'Central Bank of Iceland',
-  rate_date: '2026-10-08',
+  rate_date: '2026-10-12',
   rates: [
-    { "base": "USD", "quote": "ISK", "type": "middle", "value": 122.47 },
+    { "base": "USD", "quote": "ISK", "type": "middle", "value": 121.99 },
     // … the rest of the published table (10 currencies vs ISK)
   ],
   disclaimer: '…'
@@ -180,7 +180,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'central-bank-of-iceland-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'ISK', from: '2026-01-01', to: '2026-10-08' },
+  { source: 'USD', target: 'ISK', from: '2026-01-01', to: '2026-10-12' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -193,11 +193,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'ISK',
   from: '2026-01-01',
-  to: '2026-10-08',
+  to: '2026-10-12',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-10-08', rate: 122.47, rate_type: 'middle', derived: false, method: 'published' },
+    { date: '2026-10-12', rate: 121.99, rate_type: 'middle', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
@@ -247,6 +247,7 @@ curl "https://allratestoday.com/api/v1/central-bank/cbi/latest?format=xml&api_ke
 - MCP server: `npx -y @allratestoday/central-bank-mcp` (stdio) or the hosted endpoint `https://allratestoday.com/api/mcp` — tools for official rates, history, cross-bank comparison and publication calendars
 - Already using the general SDK or MCP server? Since 2026-10-01 [`@allratestoday/sdk`](https://www.npmjs.com/package/@allratestoday/sdk) 1.4+ has `officialRates('cbi')` and [`@allratestoday/mcp-server`](https://www.npmjs.com/package/@allratestoday/mcp-server) 0.6+ has a `get_official_rates` tool — both return this source's latest table with no key, so you can add it without a second dependency
 - Claude Code plugin (no key): `/plugin marketplace add AllRates-Today/claude-code-plugin` then `/plugin install allratestoday@allratestoday` — bundles both MCP servers plus an `/official-rate cbi ...` command
+- Need dated tables or history for an evaluation? Agents can self-issue a trial key with no signup: `POST https://allratestoday.com/api/agent/keys` (send `Content-Type: application/json`) returns a 100-call key valid 7 days; the MCP servers expose it as `request_trial_key`
 - Machine-readable site guide: [llms.txt](https://allratestoday.com/llms.txt) · [for-ai-agents](https://allratestoday.com/for-ai-agents/)
 
 ## ⚖️ Published vs derived rates
