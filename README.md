@@ -42,20 +42,20 @@ The open endpoint serves the *latest* table only and asks for a visible attribut
 The image is rendered live from the keyless endpoint above, so it follows the central bank's publications on npm and on GitHub alike without a new release. The text copy below is there for search and copy-paste: on GitHub [a daily Action](.github/workflows/daily-table.yml) refreshes it whenever the central bank publishes a new table; on npm it is as of the package's publish date.
 
 <!-- daily-table:start -->
-Published **2026-10-13** by Central Bank of Iceland — 10 rates. Updated 2026-10-14.
+Published **2026-10-14** by Central Bank of Iceland — 10 rates. Updated 2026-10-14.
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| CAD | ISK | middle | 85.48 |
-| CHF | ISK | middle | 146.26 |
-| DKK | ISK | middle | 18.22 |
-| EUR | ISK | middle | 136.2 |
-| GBP | ISK | middle | 161.26 |
-| JPY | ISK | middle | 0.7699 |
-| NOK | ISK | middle | 12.767 |
-| SEK | ISK | middle | 12.194 |
-| USD | ISK | middle | 121.74 |
-| XDR | ISK | middle | 164.68 |
+| CAD | ISK | middle | 85.69 |
+| CHF | ISK | middle | 146.2 |
+| DKK | ISK | middle | 18.247 |
+| EUR | ISK | middle | 136.4 |
+| GBP | ISK | middle | 161.64 |
+| JPY | ISK | middle | 0.7689 |
+| NOK | ISK | middle | 12.864 |
+| SEK | ISK | middle | 12.224 |
+| USD | ISK | middle | 121.84 |
+| XDR | ISK | middle | 164.85 |
 
 Source: [Official rates published by CBI, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/cbi/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
 <!-- daily-table:end -->
