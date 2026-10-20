@@ -20,6 +20,10 @@
 
 > **Official rate, not mid-market:** every value here is a number Central Bank of Iceland itself published, fixed once printed and carrying the central bank's own `rate_date` — what filings and audits require. Need the live mid-market rate for pricing or display instead? Use the [mid-market API](https://allratestoday.com/docs/) or [`@allratestoday/sdk`](https://www.npmjs.com/package/@allratestoday/sdk). The two can diverge by several percent.
 
+## 🔑 Get your API key
+
+Get a free API key at [allratestoday.com/register](https://allratestoday.com/register) — no credit card required. Latest rates are on every plan, including free.
+
 ## ⚡ Try it without a key
 
 The latest Central Bank of Iceland table is also served keyless, CORS-open and edge-cached, for evaluation, embeds and AI agents:
@@ -43,29 +47,25 @@ The image is rendered live from the keyless endpoint above, so it follows the ce
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-10-19 by Central Bank of Iceland — 10 rates. Updated 2026-10-19.</summary>
+<summary>Table as text: published 2026-10-20 by Central Bank of Iceland — 10 rates. Updated 2026-10-20.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| CAD | ISK | middle | 86.34 |
-| CHF | ISK | middle | 147.28 |
-| DKK | ISK | middle | 18.248 |
-| EUR | ISK | middle | 136.4 |
-| GBP | ISK | middle | 161.99 |
-| JPY | ISK | middle | 0.7679 |
-| NOK | ISK | middle | 12.922 |
-| SEK | ISK | middle | 12.284 |
-| USD | ISK | middle | 121.51 |
-| XDR | ISK | middle | 164.66 |
+| CAD | ISK | middle | 86.43 |
+| CHF | ISK | middle | 147.45 |
+| DKK | ISK | middle | 18.222 |
+| EUR | ISK | middle | 136.2 |
+| GBP | ISK | middle | 162.09 |
+| JPY | ISK | middle | 0.768 |
+| NOK | ISK | middle | 12.941 |
+| SEK | ISK | middle | 12.245 |
+| USD | ISK | middle | 121.44 |
+| XDR | ISK | middle | 164.55 |
 
 </details>
 
 Source: [Official rates published by CBI, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/cbi/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
 <!-- daily-table:end -->
-
-## 🔑 Get your API key
-
-Get a free API key at [allratestoday.com/register](https://allratestoday.com/register) — no credit card required. Latest rates are on every plan, including free.
 
 ## 📦 Installation
 
