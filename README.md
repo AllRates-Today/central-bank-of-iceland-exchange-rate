@@ -37,7 +37,7 @@ const r = await fetch('https://allratestoday.com/api/open/central-bank/cbi').the
 console.log(r.rate_date, r.rates.length); // the central bank's latest published table, no key
 ```
 
-The open endpoint serves the *latest* table only (JSON by default; add `?format=csv`, `xml` or `xlsx` for a file) and asks for a visible attribution link. The client below uses the keyed API, which adds point-in-time tables and history.
+The open endpoint serves the *latest* table only (JSON by default; add `?format=csv`, `xml` or `xlsx` for a file) and is free to use with a visible, followable link where the rates are shown: `<a href="https://allratestoday.com">Exchange rates by AllRatesToday</a>` (terms: <https://allratestoday.com/terms/#attribution>). The client below uses the keyed API, which adds point-in-time tables and history; with a key the link is appreciated, not required.
 
 ## 📈 Latest published table
 
@@ -47,20 +47,20 @@ The image is rendered live from the keyless endpoint above, so it follows the ce
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-10-20 by Central Bank of Iceland — 10 rates. Updated 2026-10-20.</summary>
+<summary>Table as text: published 2026-10-21 by Central Bank of Iceland — 10 rates. Updated 2026-10-21.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| CAD | ISK | middle | 86.43 |
-| CHF | ISK | middle | 147.45 |
+| CAD | ISK | middle | 86.32 |
+| CHF | ISK | middle | 147.15 |
 | DKK | ISK | middle | 18.222 |
 | EUR | ISK | middle | 136.2 |
-| GBP | ISK | middle | 162.09 |
-| JPY | ISK | middle | 0.768 |
-| NOK | ISK | middle | 12.941 |
-| SEK | ISK | middle | 12.245 |
-| USD | ISK | middle | 121.44 |
-| XDR | ISK | middle | 164.55 |
+| GBP | ISK | middle | 162.48 |
+| JPY | ISK | middle | 0.7679 |
+| NOK | ISK | middle | 12.957 |
+| SEK | ISK | middle | 12.273 |
+| USD | ISK | middle | 121.24 |
+| XDR | ISK | middle | 164.44 |
 
 </details>
 
