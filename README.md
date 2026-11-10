@@ -32,20 +32,20 @@ The image is rendered live from the keyless endpoint, so it follows the central 
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-11-09 by Central Bank of Iceland — 10 rates. Updated 2026-11-09.</summary>
+<summary>Table as text: published 2026-11-10 by Central Bank of Iceland — 10 rates. Updated 2026-11-10.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| CAD | ISK | middle | 86.79 |
-| CHF | ISK | middle | 149.5 |
-| DKK | ISK | middle | 18.327 |
-| EUR | ISK | middle | 137 |
-| GBP | ISK | middle | 164.21 |
-| JPY | ISK | middle | 0.7749 |
-| NOK | ISK | middle | 13.007 |
-| SEK | ISK | middle | 12.459 |
-| USD | ISK | middle | 122.4 |
-| XDR | ISK | middle | 165.84 |
+| CAD | ISK | middle | 86.55 |
+| CHF | ISK | middle | 149.08 |
+| DKK | ISK | middle | 18.354 |
+| EUR | ISK | middle | 137.2 |
+| GBP | ISK | middle | 164.22 |
+| JPY | ISK | middle | 0.7735 |
+| NOK | ISK | middle | 12.924 |
+| SEK | ISK | middle | 12.483 |
+| USD | ISK | middle | 122.35 |
+| XDR | ISK | middle | 165.87 |
 
 </details>
 
